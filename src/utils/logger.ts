@@ -5,6 +5,7 @@ export const logErrorToGateway = async (message: string, meta?: any) => {
 	try {
 		await axios.post(`${config.logDbUrl}`, {
 			level: "error",
+			service: "notification-service",
 			message,
 			meta,
 		});
