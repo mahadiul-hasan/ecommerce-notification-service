@@ -62,7 +62,7 @@
 
 5. Errors are logged to the **API Gateway** for monitoring.
 
-# Features
+## Features
 
 -   ### Email Templates
 
@@ -90,7 +90,7 @@
 
 -   **Fully internal microservice (no public HTTP endpoints)**
 
-# Folder Structure
+## Folder Structure
 
 ```
 notification-service/
@@ -118,7 +118,7 @@ notification-service/
 └─ README.md
 ```
 
-# Installation
+## Installation
 
 ```
 # Clone repository
@@ -129,7 +129,7 @@ cd notification-service
 npm install
 ```
 
-# Environment Variables
+## Environment Variables
 
 Create a `.env` file based on `.env.example`:
 
@@ -143,7 +143,7 @@ SMTP_PASS=your-smtp-password
 API_GATEWAY_LOG_URL=http://api-gateway.local/logs
 ```
 
-# Scripts
+## Scripts
 
 ```
 # Development
@@ -158,7 +158,7 @@ npm run start          # run compiled service
 npm run worker         # run compiled worker
 ```
 
-# Usage
+## Usage
 
 1. **Start RabbitMQ** (locally or Docker):
 
@@ -189,7 +189,7 @@ await publishMessage({
 });
 ```
 
-# Publishing Messages
+## Publishing Messages
 
 Notification service uses **RabbitMQ** only. Other services (Auth, Vendor, Order, Payment) can publish messages to different exchanges:
 
@@ -199,7 +199,7 @@ Notification service uses **RabbitMQ** only. Other services (Auth, Vendor, Order
 
 Notification service **does not expose public APIs**, so only services that can publish to RabbitMQ can send jobs.
 
-# Contributing
+## Contributing
 
 -   Use TypeScript and maintain strict typing.
 
@@ -207,7 +207,7 @@ Notification service **does not expose public APIs**, so only services that can 
 
 -   Test locally with RabbitMQ before committing.
 
-# License
+## License
 
 MIT License © 2025
 
